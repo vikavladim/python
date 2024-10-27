@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    {% for file in audiofiles %}
+        <li>
+            <audio controls>
+                <source src="{{ url_for('static', filename='uploads/' + file) }}" type="audio/mpeg">
+            </audio>
+            {{ file }}
+        </li>
+    {% endfor %}
+</ul>
+
+{% if warning %}
+    <div style="color: red">{{ warning }}</div>
+{% endif %}
+
+<form enctype="multipart/form-data" method="post">
+    <input type="file" name="file">
+    <input type="submit" value="Upload">
+</form>
+</body>
+</html>

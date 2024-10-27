@@ -1,0 +1,37 @@
+---
+- name: Ex2
+  hosts: localhost
+  become: true
+  tasks:
+  - name: Update packages
+    apt:
+      update_cache: true
+  - name: Install packages
+    apt:
+      name: '{{item}}'
+      state: present
+    loop:
+    - python3
+    - nginx
+    - redis
+  - name: Install pip redis
+    pip:
+      name: redis
+  - name: Copy files
+    copy:
+      src: '{{item}}'
+      dest: .
+    loop:
+    - ../ex01/consumer.py
+    - ../ex01/producer.py
+    - ../ex00/exploit.py
+  - name: Start redis
+    service:
+      name: redis-server
+      state: started
+  - name: Exexute check
+    command: nohup python3 consumer.py-e 4815162342,3133780085
+    async: 20
+    poll: 0
+  - name: Exexute post
+    command: python3 producer.py

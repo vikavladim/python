@@ -1,0 +1,242 @@
+{
+    "questions": [
+        {
+            "question": "Your breathing frequency",
+            "answers": [
+                {
+                    "text": "Less than 12",
+                    "value": 0
+                },
+                {
+                    "text": "12-16",
+                    "value": 1
+                },
+                {
+                    "text": "More than 12",
+                    "value": 0
+                }
+            ]
+        },
+        {
+            "question": "What is your pulse",
+            "answers": [
+                {
+                    "text": "Less than 60",
+                    "value": 0
+                },
+                {
+                    "text": "60-70",
+                    "value": 0
+                },
+                {
+                    "text": "70-80",
+                    "value": 1
+                },
+                {
+                    "text": "80-90",
+                    "value": 2
+                },
+                {
+                    "text": "90-100",
+                    "value": 1
+                },
+                {
+                    "text": "Above 100",
+                    "value": 0
+                }
+            ]
+        },
+        {
+            "question": "What is your temperature",
+            "answers": [
+                {
+                    "text": "Less than 35",
+                    "value": 0
+                },
+                {
+                    "text": "36-37",
+                    "value": 2
+                },
+                {
+                    "text": "37-42",
+                    "value": 1
+                },
+                {
+                    "text": "Above 42",
+                    "value": 0
+                }
+            ]
+        },
+        {
+            "question": "Level of skin redness",
+            "answers": [
+                {
+                    "text": "White",
+                    "value": 1
+                },
+                {
+                    "text": "Red",
+                    "value": 1
+                },
+                {
+                    "text": "Green",
+                    "value": 0
+                },
+                {
+                    "text": "Orange",
+                    "value": 1
+                },
+                {
+                    "text": "Yellow",
+                    "value": 1
+                },
+                {
+                    "text": "Gray",
+                    "value": 0
+                }
+            ]
+        },
+        {
+            "question": "Pupil dilation in mm",
+            "answers": [
+                {
+                    "text": "Less than 2",
+                    "value": 0
+                },
+                {
+                    "text": "2-8",
+                    "value": 1
+                },
+                {
+                    "text": "More than 8",
+                    "value": 0
+                }
+            ]
+        },
+        {
+            "question": "What is your height",
+            "answers": [
+                {
+                    "text": "Less than 160",
+                    "value": 0
+                },
+                {
+                    "text": "160-170",
+                    "value": 1
+                },
+                {
+                    "text": "170-180",
+                    "value": 2
+                },
+                {
+                    "text": "180-190",
+                    "value": 1
+                },
+                {
+                    "text": "190-200",
+                    "value": 0
+                },
+                {
+                    "text": "Above 200",
+                    "value": 0
+                }
+            ]
+        },
+        {
+            "question": "What is your weight",
+            "answers": [
+                {
+                    "text": "Less than 50",
+                    "value": 0
+                },
+                {
+                    "text": "50-60",
+                    "value": 1
+                },
+                {
+                    "text": "60-70",
+                    "value": 2
+                },
+                {
+                    "text": "70-80",
+                    "value": 1
+                },
+                {
+                    "text": "80-90",
+                    "value": 0
+                },
+                {
+                    "text": "Above 90",
+                    "value": 0
+                }
+            ]
+        },
+        {
+            "question": "What is your age",
+            "answers": [
+                {
+                    "text": "Less than 20",
+                    "value": 0
+                },
+                {
+                    "text": "20-30",
+                    "value": 1
+                },
+                {
+                    "text": "30-40",
+                    "value": 2
+                },
+                {
+                    "text": "40-50",
+                    "value": 1
+                },
+                {
+                    "text": "50-60",
+                    "value": 0
+                },
+                {
+                    "text": "Above 60",
+                    "value": 0
+                }
+            ]
+        },
+        {
+            "question": "What is your foot size",
+            "answers": [
+                {
+                    "text": "Less than 35",
+                    "value": 0
+                },
+                {
+                    "text": "35-40",
+                    "value": 1
+                },
+                {
+                    "text": "40-45",
+                    "value": 1
+                },
+                {
+                    "text": "Above 45",
+                    "value": 0
+                }
+            ]
+        },
+        {
+            "question": "What is your sex",
+            "answers": [
+                {
+                    "text": "Male",
+                    "value": 1
+                },
+                {
+                    "text": "Female",
+                    "value": 1
+                },
+                {
+                    "text": "Other",
+                    "value": 0
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+services:
+  day07_cont:
+    build: .
+    image: day07_image
+    volumes:
+      - .:/app

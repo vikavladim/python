@@ -1,0 +1,8 @@
+services:
+  day06_cont:
+    build: .
+    image: day06_image
+    volumes:
+      - .:/app
+    ports:
+      - "50051:50051"

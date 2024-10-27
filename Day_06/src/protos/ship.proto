@@ -1,0 +1,58 @@
+syntax = "proto3";
+
+package spaceship;
+
+message Officer {
+  string first_name = 1;
+  string last_name = 2;
+  string rank = 3;
+}
+
+enum ShipClass {
+  Corvette = 0;
+  Frigate = 1;
+  Cruiser = 2;
+  Destroyer = 3;
+  Carrier = 4;
+  Dreadnought = 5;
+}
+
+enum Alignment {
+  Ally = 0;
+  Enemy = 1;
+}
+
+message ShipResponse {
+  Alignment alignment = 1;
+  ShipClass ship_class = 2;
+  string name = 3;
+  float length = 4;
+  int32 crew_size = 5;
+  bool is_armed = 6;
+  repeated Officer officers = 7;
+}
+
+message RigthAscention {
+  float hours = 1;
+  float minutes = 2;
+  float seconds = 3;
+}
+
+message Declination{
+  float degrees = 1;
+  float minutes = 2;
+  float seconds = 3;
+}
+
+message Coordinates {
+  RigthAscention right_ascention = 1;
+  Declination declination = 2;
+}
+
+message ShipResponseList {
+  repeated ShipResponse responses = 1;
+}
+
+service ShipService {
+  rpc get_ships(Coordinates) returns (ShipResponseList){};
+}

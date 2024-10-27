@@ -1,0 +1,8 @@
+services:
+  day09_cont:
+    build: ex00
+    image: day09_image
+    volumes:
+      - .:/app
+    ports:
+      - "50051:50051"

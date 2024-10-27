@@ -1,0 +1,43 @@
+---
+- name: Установка всякого
+  hosts: localhost
+  become: true
+
+  tasks:
+    - name: Обновление списка пакетов
+      apt:
+        update_cache: yes
+
+    - name: Установка пакетов
+      apt:
+        name: '{{item}}'
+        state: present
+      loop:
+        - nginx
+        - python3
+        - redis
+
+    - name: Установка pip redis
+      pip:
+        name: redis
+
+    - name: Копирование файлов
+      copy:
+        src: '{{item}}'
+        dest: .
+      loop:
+        - ../ex01/producer.py
+        - ../ex01/consumer.py
+
+    - name: Запуск redis
+      systemd:
+        name: redis
+        
+
+    - name: Запуск скрипта просмотра
+      command: nohup python3 consumer.py -e 4815162342,4815162342 > test.txt
+      async: 20
+      poll: 0
+
+    - name: Запуск скрипта отправки
+      command: python3 producer.py 
